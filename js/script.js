@@ -10,11 +10,18 @@
  * This function calculates salary
  */
 function calculateSalary () {
-  // input
   const TAX_RATE = 0.18
-  const hoursWorked = parseInt( document.getElementById (hours-worked).value
-  )
-  document.getElementById('salary').innerHTML = `Your pay will be: $ ${takeHomeSalary.toFixed(2)}`
-  document.getElementById('salary').innerHTML = 'Your pay will be: $' + takeHomeSalary.toFixed(2)
-  xx = parseFloat(document.getElementById('salary').value)
+  // input
+  const hoursWorked = parseInt(document.getElementById('hours-worked').value)
+  const hourlyWage = parseInt(document.getElementById('hourly-wage').value)
+  const PAY = (hoursWorked * hourlyWage * 1.00 - 0.18)
+  const TAXES = ((hoursWorked * hourlyWage) * 0.18)
+
+  
+  // process
+  const calculateSalary = (PAY + TAXES )
+
+  // output
+  document.getElementById('hours-worked').innerHTML = 'Your pay will be: $ ${calculateSalary.toFixed(2)}`
+  document.getElementById('hourly-wage').innerHTML = 'Your pay will be: $' + calculateSalary.toFixed(2)
 }
