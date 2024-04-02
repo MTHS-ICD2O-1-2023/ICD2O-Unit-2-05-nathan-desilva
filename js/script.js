@@ -19,7 +19,7 @@ function calculateSalary () {
 
   
   // process
-  const calculateSalary = (PAY + TAXES )
+  const calculateSalary = PAY + TAXES
 
   // output
   document.getElementById('hours-worked').innerHTML = 'Your pay will be: $ ${calculateSalary.toFixed(2)}`
