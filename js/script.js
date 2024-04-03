@@ -17,11 +17,12 @@ function calculateSalary () {
 
   
   // process
-  const pay = (hoursWorked * hourlyWage * 1.00 - TAX_RATE)
+  const pay = (hoursWorked * hourlyWage * (1.00 - TAX_RATE))
   const taxes = ((hoursWorked * hourlyWage) * TAX_RATE)
-  const calculateSalary = pay + taxes
 
   // output
-  document.getElementById('salary').innerHTML = 'Your pay will be: $ ${calculateSalary.toFixed(2)}'
-  document.getElementById('salary').innerHTML = 'Your pay will be: $' + calculateSalary.toFixed(2)
+  document.getElementById('salary').innerHTML = 'Your pay will be: $ ${pay.toFixed(2)}'
+  document.getElementById('salary').innerHTML = 'Your pay will be: $' + pay.toFixed(2)
+    document.getElementById('government').innerHTML = 'The government will take: $ ${taxes.toFixed(2)}'
+  document.getElementById('government').innerHTML = 'The government will take: $' + taxes.toFixed(2)
 }
