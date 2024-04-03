@@ -23,6 +23,6 @@ function calculateSalary () {
   // output
   document.getElementById('salary').innerHTML = 'Your pay will be: $ ${pay.toFixed(2)}'
   document.getElementById('salary').innerHTML = 'Your pay will be: $' + pay.toFixed(2)
-    document.getElementById('government').innerHTML = 'The government will take: $ ${taxes.toFixed(2)}'
+  document.getElementById('government').innerHTML = 'The government will take: $ ${taxes.toFixed(2)}'
   document.getElementById('government').innerHTML = 'The government will take: $' + taxes.toFixed(2)
 }
