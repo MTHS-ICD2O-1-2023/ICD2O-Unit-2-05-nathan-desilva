@@ -14,14 +14,14 @@ function calculateSalary () {
   // input
   const hoursWorked = parseInt(document.getElementById('hours-worked').value)
   const hourlyWage = parseInt(document.getElementById('hourly-wage').value)
-  const PAY = (hoursWorked * hourlyWage * 1.00 - 0.18)
-  const TAXES = ((hoursWorked * hourlyWage) * 0.18)
 
   
   // process
-  const calculateSalary = PAY + TAXES
+  const pay = (hoursWorked * hourlyWage * 1.00 - TAX_RATE)
+  const taxes = ((hoursWorked * hourlyWage) * TAX_RATE)
+  const calculateSalary = pay + taxes
 
   // output
-  document.getElementById('hours-worked').innerHTML = 'Your pay will be: $ ${calculateSalary.toFixed(2)}'
-  document.getElementById('hourly-wage').innerHTML = 'Your pay will be: $' + calculateSalary.toFixed(2)
+  document.getElementById('salary').innerHTML = 'Your pay will be: $ ${calculateSalary.toFixed(2)}'
+  document.getElementById('salary').innerHTML = 'Your pay will be: $' + calculateSalary.toFixed(2)
 }
