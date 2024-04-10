@@ -12,11 +12,13 @@
 function calculateSalary () {
   const TAX_RATE = 0.18
   // input
-  const hoursWorked = parseInt(document.getElementById('hours-worked').value)
-  const hourlyWage = parseInt(document.getElementById('hourly-wage').value)
+  const hoursWorked = parseFloat(document.getElementById('hours-worked').value)
+  const hourlyWage = parseFloat(document.getElementById('hourly-wage').value)
 
   
   // process
+  console.log(hoursWorked)
+  console.log(hourlyWage)
   const pay = (hoursWorked * hourlyWage * (1.00 - TAX_RATE))
   const taxes = ((hoursWorked * hourlyWage) * TAX_RATE)
 
